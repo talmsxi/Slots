@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Однорукий бандит</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page">
+        <h1 class="title">ОДНОРУКИЙ БАНДИТ</h1>
+
+        <div class="player">
+            <span class="player-label">Гравець</span>
+            <span class="player-name" id="playerName">USER</span>
+        </div>
+
+        <div class="stage">
+            <img class="cat cat-left" src="img/cat1.png" alt="Кіт-круп'є">
+            <img class="cat cat-right" src="img/cat2.png" alt="Кіт-охоронець">
+
+            <div class="machine" id="machine">
+                <div class="bulbs">
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                </div>
+
+                <div class="screen">
+                    <div class="reel" id="reel0">
+                        <div class="cell"><img src="img/seven.png" alt=""></div>
+                        <div class="cell"><img src="img/cherry.png" alt=""></div>
+                        <div class="cell"><img src="img/lemon.png" alt=""></div>
+                    </div>
+                    <div class="reel" id="reel1">
+                        <div class="cell"><img src="img/grape.png" alt=""></div>
+                        <div class="cell"><img src="img/seven.png" alt=""></div>
+                        <div class="cell"><img src="img/melon.png" alt=""></div>
+                    </div>
+                    <div class="reel" id="reel2">
+                        <div class="cell"><img src="img/bell.png" alt=""></div>
+                        <div class="cell"><img src="img/melon.png" alt=""></div>
+                        <div class="cell"><img src="img/seven.png" alt=""></div>
+                    </div>
+                </div>
+
+                <div class="lever-mount"></div>
+                <div class="lever" id="lever">
+                    <div class="lever-stick"></div>
+                    <div class="lever-ball"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="attempts" id="attempts">Спроба 0 з 3</div>
+            <div class="spin" id="spinButton" onclick="spin();">КРУТИТИ</div>
+            <div class="result" id="result"></div>
+        </div>
+
+        <div class="rules">
+            <p class="rules-title">ПРАВИЛА</p>
+            <p class="rules-text">Виграш — якщо за три спроби випаде горизонтальний ряд з трьох однакових картинок. По вертикалі картинки не повторюються.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
